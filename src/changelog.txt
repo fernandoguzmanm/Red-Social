@@ -1,0 +1,98 @@
+EXAMPLE:
+	[name] [date (dd/mm)]
+- n lines explaining which changes the author has done, each new change will start the line by '-', otherwise, the line will start naturally.
+
+	Jorge 6/04
+- Creo el proyecto con el modelo de dominio
+
+	Carlos 20/04
+- Implementacion metodos basicos en las clases del modelo (constructores con/sin par metros), getters, setters,...
+
+	Carlos 21/04
+- Implentacion de un ejemplo de DAO, en este caso de Usuario.
+
+	Jorge 22/04
+- El Perfil guarda el tipo de usuario.
+
+	Carlos/Daniel 23/04
+- Implementacion de los DAO (publicacion, comunidad y comentario)
+
+	Carlos 24/04
+- Implementacion de algunas vistas (Log in, Registro y Realizar Observacion) y sus ActionListener
+
+	Jorge 27/04
+- Singleton y cambios en register view y DAOusuario
+
+	Carlos 27/04
+- Implementacion de vista para explorar comunidades (MenuComunidadesView) y vista para ver una comunidad en específico(ComunidadView)
+
+	Carlos 28/04
+- Implementacion de vista para realizar un comentario (ComentarDialog), PublicacionView y  mejoras en PrincipalView.
+
+ 	Carlos/Daniel 29/04
+ - Implementacion de actionListener de varias clases
+ 
+ 	Jorge 1/05
+ - Cambio de password funciona
+ - Cambio de tipo de usuario funciona
+ - Login y registro funcionan (registro actualiza la bd)
+ - Cambio el path para pillar jsons
+ - Creo una carpeta en iconos para las publicaciones
+ - Publicar contenido funciona, tambien se inserta en la bd
+ - Ligeros cambios de algunas vistas
+ - Se muestra el nombre del usuario y la foto de perfil
+ - Cambia la foto de perfil y la cambia en la bd
+
+ - Falta cargar la lista de publicaciones de la bd!!
+ 	ERROR: como no se carga la lista de publicaciones, al intentar ver las estadisticas peta
+ 	
+ 	PABLO 1/05
+ - Hecho el ID de las publicaciones y los comentatios
+ - Cambiada la BD para tener idpublicacion como varchar, guarda un hash MD5
+ - He mirado el boton de la comunidad, no se como, pero creo que habra  que tener una instancia del Usuario que este  en la aplicacion en controller
+
+ 	Daniel 01/05
+ - Implementacion de vista de admin, a falta de unos cuantos paneles
+ 
+ 	Jorge 2/05
+ - Creo que he implementado que cargue publicaciones y comentarios de la bd, no lo he probado
+ - He creado el campo booleano empresa en la bd para saber si es tipo empresa o no 
+ 
+ 	Pablo 2/05
+ - Cambios en las comunidades para usar ID, usa el hash del nombre
+ - Clases nuevas para los DAOs de los chats, no se como hacer que se cargue y se guarde en un .json
+ - Los chats deberian funcionar similar a las observaciones, se les llama como id el archivo y se carga de ahi sacando el id de la BD
+ 
+ 	Jorge 3/05
+ - Boton cerrar sesion y borrar cuenta funcionando
+ - Seguidores y seguidos funcionando
+ - Hay que hacer los chats de comunidades
+ - Carga las imagenes de las publicaciones y la lista bien, pero no entra a la vista de publicacion
+ - He quitado el numero de visitas en publicaciones
+ - Arreglo muchos errores en los daos de consultas mal hechas o simples mejoras da calidad de estas
+ - Otro error que habria que mirar es el tamanno de una comunidad cuando solo hay una en la bd
+ 
+ 	Daniel 3/05
+ - Implementacion de la vista de agregarComunidad
+ - Cambio de argumento en la funcion buscarComunidad del DAO, de int id a string id
+ - Agregado dos icons para la vista admin
+ - Modificacion de la vista de admin, se ha implementado el ambito de comunidad que solo faltaria el boton de eliminar
+ 	
+ 	Carlos 04/05
+ - Creo que una vista para cambiar el nombre(CambiarNombreView, he implementado la logica pero no se si funciona porque no me va bien lo de la BD)
+ - Ahora se diferencian las vistas de comentar en una publicacion y comentar en una comunidad (antes teniamos ComentarDialog, ahora ComentarPublicacion y ComentarComunidad)
+ - Estas vistas de comentar, necesitan saber el nombre del autor del comentario, asi que he cambiado los constructores y ahora tambien reciben el usuario que esta utulizando la app
+ - He creado la vista PerfilAjenoView para ver el perfil ajeno, todavia falta la logica del boton de seguir.
+ - AdminView casi terminada, solo falta lo de las observaciones. 
+ - He implementado la logica para ver el listado de publicaciones con una nueva vista (ListadoPublicacionesView), pero no lo he probado porque no me va bien lo de la BD.
+
+ 	Daniel 4/05
+ - Modificacion visual de la vista de ConfirmacionView
+ - AdminView terminada, se ha implementando la parte de observaciones. Faltaria solo probarlo con la bd.
+ 
+ 	Carlos 4/05
+ - Termino de implementar la clase ChatsView y ChatView. Esta segunda no esta del todo bien, porque hay veces que se duplican los mensajes. No he sido capaz de solucionarlo :(
+ - Implemento el boton de Seguir/Siguiendo en la vista PerfilAjenoView
+ 
+ 
+ 
